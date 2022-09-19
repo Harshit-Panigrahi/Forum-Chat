@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 :root {
   --main-darklg: #1d2635;
-  --main-dark: #161d29;
+  --main-dark: #192232;
   --primary-color: #2f80ec;
-  --main-light: #eeeeee;
-  font-family: "Consolas", sans-serif;
+  --main-light: #dfdfdf;
+  font-family: "Poppins", sans-serif;
 }
 
 .main {
@@ -12,11 +14,11 @@
 }
 
 .options {
-  padding: 15px;
+  padding: 1rem;
   display: flex;
   background-color: var(--main-darklg);
+  justify-content: center;
 }
-
 .options_button {
   display: flex;
   justify-content: center;
@@ -30,66 +32,38 @@
   margin: 0 0.5rem;
 }
 
-#show_chat {
-  display: none;
+.main-chat-window {
+  overflow-y: scroll;
 }
-
 .messages {
   display: flex;
   flex-direction: column;
 }
-
 .username {
-  color: #2f80ec;
+  color: var(--primary-color);
 }
-
 .message {
-  padding: 0.3em 1em;
-  color: white;
+  margin: 25px;
+  margin-bottom: 0px;
+  padding: 10px 25px;
+  border-radius: 12px;
+  width: 50%;
+  background-color: var(--main-light);
+  color: var(--main-darklg);
 }
 
 .main_message_container {
   padding-left: 1rem;
   display: flex;
-  width: 100%;
+  width: 95%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-
-.main_message_container > input {
+#chat_message {
   height: 50px;
-  width: 100%;
   flex: 1;
   font-size: 1rem;
   border-radius: 5px;
   padding-left: 20px;
   border: none;
-}
-
-.room {
-  font-size: 2em;
-  background-color: #3a4961;
-}
-
-#header_back {
-  display: none;
-  position: absolute;
-  font-size: 1.3rem;
-  top: 17px;
-  left: 28px;
-  color: #fff;
-}
-
-@media (max-width: 700px) {
-  #show_chat {
-    display: flex;
-  }
-
-  .right_window {
-    display: none;
-  }
-
-  .left_window {
-    display: flex;
-  }
 }

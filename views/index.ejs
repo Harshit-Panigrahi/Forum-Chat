@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Chat App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="https://kit.fontawesome.com/def0d560d9.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap -->
     <link
@@ -15,6 +15,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
   </head>
 
   <body>
@@ -23,13 +26,9 @@
         class="col-sm-12 col-md-12 col-lg-12 text-center p-3"
         style="background-color: #1d2735"
       >
-        <div id="header_back">
-          <i class="fas fa-angle-left"></i>
-        </div>
         <h3 class="text-white">Chat Forum</h3>
       </div>
     </div>
-
     <div class="row main">
       <div class="col-sm-12 col-md-12 col-lg-12 left-window">
         <div class="row">
@@ -39,17 +38,16 @@
           >
             <!-- Chat Messages -->
           </div>
-
           <div class="col-sm-12 col-md-12 col-lg-12 options">
             <div class="main_message_container">
               <input
                 id="chat_message"
                 type="text"
                 autocomplete="off"
-                placeholder="Enter message"
+                placeholder="Type message here..."
               />
               <div id="send" class="options_button">
-                <i class="fa fa-plus" aria-hidden="true"></i>
+                <i class="fa-solid fa-paper-plane"></i>
               </div>
             </div>
           </div>
