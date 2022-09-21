@@ -21,30 +21,30 @@
   </head>
 
   <body>
-    <div class="row" style="overflow: hidden">
+    <div class="row">
       <div
         class="col-sm-12 col-md-12 col-lg-12 text-center p-3"
-        style="background-color: #1d2735"
+        style="background-color: #1d2735; height: 11vh;"
       >
         <h3 class="text-white">Chat Forum</h3>
       </div>
     </div>
-    <div class="row main">
-      <div class="col-sm-12 col-md-12 col-lg-12 left-window">
+    <div class="row" style="display: flex;">
+      <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="row">
           <div
             class="col-sm-12 col-md-12 col-lg-12 messages"
-            style="height: 82vh; background-color: #171e2a"
+            style="height: 80vh; background-color: #171e2a"
           >
             <!-- Chat Messages -->
           </div>
           <div class="col-sm-12 col-md-12 col-lg-12 options">
-            <div class="main_message_container">
+            <div id="msg-inp-cont">
               <input
-                id="chat_message"
+                id="msg-input"
                 type="text"
                 autocomplete="off"
-                placeholder="Type message here..."
+                placeholder="Enter message here"
               />
               <div id="send" class="options_button">
                 <i class="fa-solid fa-paper-plane"></i>
