@@ -1,29 +1,30 @@
 const socket = io("/");
 
-let username = prompt("Enter your name:")
+let username = prompt("Enter your name:");
 
 $(function () {
   $("#send").click(function () {
-    msg = $("#msg-input").val();
+    let msg = $("#msg-input").val();
     if (msg.length !== 0) {
-      socket.emit("message", msg);
+      socket.emit("message", msg, username);
       $("#msg-input").val("");
     }
   });
-  
   $("#msg-input").keydown(function (e) {
-    msg = $("#msg-input").val();
+    let msg = $("#msg-input").val();
     if (e.key == "Enter" && msg.length !== 0) {
-      socket.emit("message", msg);
+      socket.emit("message", msg, username);
       $("#msg-input").val("");
     }
   });
 });
 
-socket.on("createMessage", (message) => {
+socket.on("newMsg", (msg, sender) => {
+  console.log("hello");
   $(".messages").append(
     `<div class="message">
-      <span>${username}: ${message}</span>
+      <b class="username">${sender}:</b>
+      <span>${msg}</span>
     </div>`
   );
 });

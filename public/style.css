@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
 :root {
   --main-darklg: #1d2635;
   --main-dark: #192232;
-  --primary-color: #2f80ec;
+  --primary-color: rgb(50, 120, 200);
   --main-light: #dfdfdf;
-  font-family: "Poppins", sans-serif;
+  font-family: "Consolas", sans-serif;
 }
 
 .options {
@@ -31,16 +29,17 @@
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  padding: 15px;
 }
 .username {
   color: var(--primary-color);
 }
 .message {
-  margin: 25px;
-  margin-top: 0px;
+  margin: 10px 25px;
   padding: 10px 25px;
   border-radius: 12px;
   width: 50%;
+  word-wrap: break-word;
   background-color: var(--main-light);
   color: var(--main-dark);
 }
